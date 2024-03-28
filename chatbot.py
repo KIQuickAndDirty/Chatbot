@@ -1,10 +1,13 @@
 import openai
 
+# API-Key
 client = openai.OpenAI(api_key="") # "" <- dein eigenen API-Key einsetzen
 
+# Hinweis zum beenden des Chatbots
 print("Zum schließen des Chatbots, schreibe 'Beenden'\n")
-eingabe = None
 
+# Initalisierung des Chatbots + Print-Befehl für Output
+eingabe = None
 while eingabe != "Beenden":
   eingabe = input("Eingabe: ")
   response = client.chat.completions.create(
